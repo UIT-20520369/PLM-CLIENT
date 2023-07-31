@@ -14,7 +14,7 @@ export default () => {
       <p>Đây là trang login nè</p>
       {
         users && users.users.length >0 && (
-            <div> {users.users.map(c =>( <p>{c.name}</p>))}</div>
+            <div> {users.users.map(c =>( <p key={c.id}>{c.name}</p>))}</div>
         )
       }
     </div>
