@@ -1,15 +1,11 @@
-.page{
+.App{
     display: flex;
 }
 
 .left{
     width: 240px;
 }
-.page{
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-}
+
 .right{
     flex-grow: 1;
 }
