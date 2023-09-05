@@ -289,11 +289,11 @@ export const getMUIPalette = (themeMode, themescheme) => {
 
       /**/
       background: {
-        default: scheme.surfaceContainer,
-        paper: scheme.surface,
+        default: scheme.background,
+        paper: scheme.background,
       },
       onBackground: {
-        main: scheme.onSurface,
+        main: scheme.onBackground,
       },
       common: {
         white: scheme.background,
