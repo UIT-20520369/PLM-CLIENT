@@ -20,7 +20,7 @@ export const getListItemButton = (theme) => {
     MuiListItemButton: {
       styleOverrides: {
         root: {
-          borderRadius: 50,
+          borderRadius: 10,
           color: palette.onSurfaceVariant.main,
           "&:hover": {
             backgroundColor: getStateLayerColor(
