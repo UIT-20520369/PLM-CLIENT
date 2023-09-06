@@ -13,9 +13,10 @@ import StatisticsIcon from "@mui/icons-material/InsertChartOutlined";
 import ProfileIcon from "@mui/icons-material/AccountCircleOutlined";
 import SettingsIcon from "@mui/icons-material/SettingsOutlined";
 import List from "@mui/material/List";
+import Logo from "../../assets/logo.png";
 
 import "./sidebar.css";
-
+import { Typography } from "@mui/material";
 const drawerWidth = 256;
 const iconComponents = {
   Home: HomeIcon,
@@ -46,7 +47,12 @@ function Sidebar() {
       variant="permanent"
       anchor="left"
     >
-      <Toolbar />
+      <div class="logo-container">
+        <img className="logo" src={Logo} alt="Avatar" />
+        <Typography className="name-container" variant="body1" component="h1">
+          Phuong Love Money
+        </Typography>
+      </div>
       <div className="sidebar-container">
         <List>
           {[
