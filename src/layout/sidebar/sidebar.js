@@ -14,7 +14,7 @@ import ProfileIcon from "@mui/icons-material/AccountCircleOutlined";
 import SettingsIcon from "@mui/icons-material/SettingsOutlined";
 import List from "@mui/material/List";
 
-import "./sidebar";
+import "./sidebar.css";
 
 const drawerWidth = 256;
 const iconComponents = {
@@ -41,49 +41,41 @@ function Sidebar() {
         "& .MuiDrawer-paper": {
           width: drawerWidth,
           boxSizing: "border-box",
-          height: "100%",
         },
       }}
       variant="permanent"
       anchor="left"
-      PaperProps={{
-        height: "100%",
-        position: "relative",
-      }}
     >
       <Toolbar />
-      <List>
-        {[
-          "Home",
-          "Transactions",
-          "Wallets",
-          "Groups",
-          "Loans",
-          "Statistics",
-        ].map((text, index) => (
-          <ListItem key={text}>
-            <ListItemButton>
-              <ListItemIcon>{Icon(text)}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <List
-        sx={{
-          position: "absolute",
-          bottom: 0,
-        }}
-      >
-        {["Profile", "Settings"].map((text, index) => (
-          <ListItem key={text}>
-            <ListItemButton>
-              <ListItemIcon>{Icon(text)}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <div className="sidebar-container">
+        <List>
+          {[
+            "Home",
+            "Transactions",
+            "Wallets",
+            "Groups",
+            "Loans",
+            "Statistics",
+          ].map((text, index) => (
+            <ListItem key={text}>
+              <ListItemButton>
+                <ListItemIcon>{Icon(text)}</ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <List>
+          {["Profile", "Settings"].map((text, index) => (
+            <ListItem key={text}>
+              <ListItemButton>
+                <ListItemIcon>{Icon(text)}</ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </div>
     </Drawer>
   );
 }
