@@ -47,7 +47,7 @@ function Sidebar() {
       variant="permanent"
       anchor="left"
     >
-      <div class="logo-container">
+      <div className="logo-container">
         <img className="logo" src={Logo} alt="Avatar" />
         <Typography className="name-container" variant="h1">
           Phuong Love Money
