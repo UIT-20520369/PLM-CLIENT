@@ -38,6 +38,7 @@ export const getButton = (theme) => {
           borderRadius: "30px",
           textTransform: "none",
           fontWeight: "bold",
+          fontSize: "1rem",
           "&:has(>svg)": {
             padding: "8px",
             borderRadius: "50%",

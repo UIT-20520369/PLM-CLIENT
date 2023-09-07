@@ -358,5 +358,39 @@ export const getMUIPalette = (themeMode, themescheme) => {
       divider: scheme.outline,
     },
     tones: themescheme.tones,
+    typography: {
+      fontFamily: "'Josefin Sans', sans-serif",
+      h1: {
+        fontWeight: 600,
+        fontSize: "2rem",
+      },
+      h2: {
+        fontWeight: 600,
+        fontSize: "1.75rem",
+      },
+      h3: {
+        fontWeight: 500,
+        fontSize: "1.5rem",
+      },
+      h4: {
+        fontWeight: 500,
+        fontSize: "1.25rem",
+      },
+      h5: {
+        fontWeight: 500,
+        fontSize: "1.25rem",
+      },
+      h6: {
+        fontWeight: 500,
+        fontSize: "1.25rem",
+      },
+      body1: {
+        fontSize: "1.2rem",
+      },
+      caption: {
+        fontSize: "1rem",
+        fontStyle: "italic",
+      },
+    },
   };
 };
