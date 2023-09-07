@@ -49,7 +49,7 @@ function Sidebar() {
     >
       <div class="logo-container">
         <img className="logo" src={Logo} alt="Avatar" />
-        <Typography className="name-container" variant="body1" component="h1">
+        <Typography className="name-container" variant="h1">
           Phuong Love Money
         </Typography>
       </div>

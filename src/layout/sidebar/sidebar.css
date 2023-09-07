@@ -9,6 +9,7 @@
     padding: 32px;
     display: flex;
     gap: 12px;
+    align-items: center;
 }
 .logo{
     height: 50px;
@@ -18,4 +19,6 @@
 
 .name-container{
     width: 50px;
+    line-height: 1 !important;
+    font-size: 1.5rem !important;
 }
