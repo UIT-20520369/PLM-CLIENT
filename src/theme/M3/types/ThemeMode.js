@@ -1,1 +1,1 @@
-// export type ThemeMode = 'light' | 'dark';
+export const ThemeMode = "light" | "dark";
