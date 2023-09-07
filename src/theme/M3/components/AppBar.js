@@ -23,8 +23,8 @@ export const getAppBar = (theme) => {
       },
       styleOverrides: {
         colorDefault: {
-          background: palette.surfaceContainer.main,
-          color: palette.onSurface.main,
+          background: palette.background.default,
+          color: palette.onBackground.main,
         },
         colorPrimary: {
           background: palette.surface.main,

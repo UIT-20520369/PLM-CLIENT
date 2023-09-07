@@ -15,6 +15,8 @@ import SettingsIcon from "@mui/icons-material/SettingsOutlined";
 import List from "@mui/material/List";
 import Logo from "../../assets/logo.png";
 
+import { Link } from "react-router-dom";
+
 import "./sidebar.css";
 import { Typography } from "@mui/material";
 const drawerWidth = 256;
@@ -28,12 +30,15 @@ const iconComponents = {
   Profile: ProfileIcon,
   Settings: SettingsIcon,
 };
+const navigations = {
+  Home: "/",
+  Profile: "/login",
+};
 function Icon(name) {
   const IconComponent = iconComponents[name];
-  console.log(<IconComponent />);
   return <IconComponent />;
 }
-function Sidebar() {
+function Sidebar({ title }) {
   return (
     <Drawer
       sx={{
@@ -64,7 +69,11 @@ function Sidebar() {
             "Statistics",
           ].map((text, index) => (
             <ListItem key={text}>
-              <ListItemButton>
+              <ListItemButton
+                component={Link}
+                to={navigations[text]}
+                selected={title === text}
+              >
                 <ListItemIcon>{Icon(text)}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -74,7 +83,11 @@ function Sidebar() {
         <List>
           {["Profile", "Settings"].map((text, index) => (
             <ListItem key={text}>
-              <ListItemButton>
+              <ListItemButton
+                component={Link}
+                to={navigations[text]}
+                selected={title === text}
+              >
                 <ListItemIcon>{Icon(text)}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
