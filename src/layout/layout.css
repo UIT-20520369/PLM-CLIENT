@@ -9,3 +9,7 @@
 .right{
     flex-grow: 1;
 }
+
+.page{
+    padding: 24px;
+}
