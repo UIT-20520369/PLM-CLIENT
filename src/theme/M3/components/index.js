@@ -16,3 +16,4 @@ export * from "./ToggleButton";
 export * from "./ToggleButtonGroup";
 export * from "./Tooltip";
 export * from "./Divider";
+export * from "./Typography";

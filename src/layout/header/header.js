@@ -10,7 +10,7 @@ function Header({ title }) {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h2" sx={{ flexGrow: 1 }}>
+        <Typography variant="h2" color="onBackground" sx={{ flexGrow: 1 }}>
           {title}
         </Typography>
         <Button color="inherit">Login</Button>

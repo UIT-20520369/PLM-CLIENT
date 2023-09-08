@@ -18,6 +18,7 @@ import {
   getToggleButtonGroup,
   getTooltip,
   getDivider,
+  getTypography,
 } from "../components";
 
 export const getMUIComponents = (theme) => {
@@ -42,6 +43,7 @@ export const getMUIComponents = (theme) => {
       ...getToggleButtonGroup(theme),
       ...getTooltip(theme),
       ...getDivider(theme),
+      ...getTypography(theme),
     },
   };
 };
