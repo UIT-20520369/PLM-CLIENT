@@ -54,7 +54,7 @@ function Sidebar({ title }) {
     >
       <div className="logo-container">
         <img className="logo" src={Logo} alt="Avatar" />
-        <Typography className="name-container" variant="h1">
+        <Typography className="name-container" variant="h1" color="onSurface">
           Phuong Love Money
         </Typography>
       </div>
