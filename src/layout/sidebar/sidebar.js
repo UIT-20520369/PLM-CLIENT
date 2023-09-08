@@ -33,6 +33,7 @@ const iconComponents = {
 const navigations = {
   Home: "/",
   Profile: "/login",
+  Transactions: "/transactions",
 };
 function Icon(name) {
   const IconComponent = iconComponents[name];
