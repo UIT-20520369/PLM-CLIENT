@@ -5,13 +5,17 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routers";
 import M3 from "./theme/M3/M3";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <M3>
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    </LocalizationProvider>
   </M3>
 );
 
