@@ -1,0 +1,12 @@
+.App{
+    display: flex;
+    >.left{
+        width: 256px;
+    }
+    >.right{
+        flex-grow: 1;
+        >.page{
+            padding: 24px;
+        }
+    }
+}

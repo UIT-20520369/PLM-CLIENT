@@ -1,4 +1,4 @@
-import "./layout.css";
+import "./layout.scss";
 import Header from "./header/header";
 import Sidebar from "./sidebar/sidebar";
 import { Outlet } from "react-router-dom";

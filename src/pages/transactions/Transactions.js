@@ -1,11 +1,25 @@
 import React from "react";
 import { Button, Chip, Grid, Typography } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import "./Transactions.css";
-function handleFilterType() {}
+import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
+
+import "./Transactions.scss";
 function Transactions() {
+  const filter = {
+    period: Date,
+    types: ["Expenses", "Revenses"],
+  };
+  function handleFilterType(type) {
+    const index = filter.types.indexOf(type);
+    if (index > -1) {
+      filter.types.splice(index, 1);
+    } else {
+      filter.types.push(type);
+    }
+    console.log(filter.types);
+  }
   return (
-    <div className="transactions">
+    <div id="transactions">
       <div className="actionContainer">
         <div className="left">
           <Typography variant="subtitle1" sx={{ height: "fit-content" }}>
@@ -20,11 +34,16 @@ function Transactions() {
               },
             }}
           />
-          <Chip label="Expenses" onClick={handleFilterType} />
           <Chip
+            icon={<CheckOutlinedIcon fontSize="small" />}
+            label="Expenses"
+            onClick={(event) => handleFilterType("Expenses")}
+          />
+          <Chip
+            icon={<CheckOutlinedIcon fontSize="small" />}
             label="Revenses"
             variant="outlined"
-            onClick={handleFilterType}
+            onClick={(event) => handleFilterType("Revenses")}
           />
         </div>
         <Button>Add Transactions</Button>
