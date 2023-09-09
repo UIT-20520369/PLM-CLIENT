@@ -229,18 +229,23 @@ export const getMUIPalette = (themeMode, themescheme) => {
 
       surfaceContainerLowest: {
         main: scheme.surfaceContainerLowest,
+        contrastText: scheme.onSurface,
       },
       surfaceContainerLow: {
         main: scheme.surfaceContainerLow,
+        contrastText: scheme.onSurface,
       },
       surfaceContainer: {
         main: scheme.surfaceContainer,
+        contrastText: scheme.onSurface,
       },
       surfaceContainerHigh: {
         main: scheme.surfaceContainerHigh,
+        contrastText: scheme.onSurface,
       },
       surfaceContainerHighest: {
         main: scheme.surfaceContainerHighest,
+        contrastText: scheme.onSurface,
       },
 
       surfaceVariant: {

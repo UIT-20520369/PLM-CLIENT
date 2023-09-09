@@ -19,6 +19,7 @@ import {
   getTooltip,
   getDivider,
   getTypography,
+  getChip,
 } from "../components";
 
 export const getMUIComponents = (theme) => {
@@ -44,6 +45,7 @@ export const getMUIComponents = (theme) => {
       ...getTooltip(theme),
       ...getDivider(theme),
       ...getTypography(theme),
+      ...getChip(theme),
     },
   };
 };

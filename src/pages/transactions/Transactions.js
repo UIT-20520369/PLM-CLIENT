@@ -1,21 +1,23 @@
-import React from "react";
+import { React, useState } from "react";
 import { Button, Chip, Grid, Typography } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 
 import "./Transactions.scss";
 function Transactions() {
-  const filter = {
-    period: Date,
+  const [filter, setFilter] = useState({
+    period: Date.now,
     types: ["Expenses", "Revenses"],
-  };
+  });
   function handleFilterType(type) {
-    const index = filter.types.indexOf(type);
+    let newTypes = filter.types;
+    const index = newTypes.indexOf(type);
     if (index > -1) {
-      filter.types.splice(index, 1);
+      newTypes.splice(index, 1);
     } else {
-      filter.types.push(type);
+      newTypes.push(type);
     }
+    setFilter({ ...filter, types: newTypes });
     console.log(filter.types);
   }
   return (
@@ -35,14 +37,33 @@ function Transactions() {
             }}
           />
           <Chip
-            icon={<CheckOutlinedIcon fontSize="small" />}
+            icon={
+              filter.types.includes("Expenses") ? (
+                <CheckOutlinedIcon fontSize="small" />
+              ) : null
+            }
             label="Expenses"
+            color={
+              filter.types.includes("Expenses")
+                ? "secondaryContainer"
+                : "surface"
+            }
+            variant={filter.types.includes("Expenses") ? "filled" : "outlined"}
             onClick={(event) => handleFilterType("Expenses")}
           />
           <Chip
-            icon={<CheckOutlinedIcon fontSize="small" />}
+            icon={
+              filter.types.includes("Revenses") ? (
+                <CheckOutlinedIcon fontSize="small" />
+              ) : null
+            }
             label="Revenses"
-            variant="outlined"
+            color={
+              filter.types.includes("Revenses")
+                ? "secondaryContainer"
+                : "surface"
+            }
+            variant={filter.types.includes("Revenses") ? "filled" : "outlined"}
             onClick={(event) => handleFilterType("Revenses")}
           />
         </div>
