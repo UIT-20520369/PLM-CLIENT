@@ -7,11 +7,12 @@ import { router } from "./routers";
 import M3 from "./theme/M3/M3";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import "dayjs/locale/en-gb";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <M3>
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en-gb">
       <React.StrictMode>
         <RouterProvider router={router} />
       </React.StrictMode>

@@ -2,13 +2,24 @@ import { React, useState } from "react";
 import { Button, Chip, Grid, Typography } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 import "./Transactions.scss";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+dayjs.tz.setDefault("Asia/Ho_Chi_Minh");
 function Transactions() {
   const [filter, setFilter] = useState({
-    period: Date.now,
+    period: dayjs(),
     types: ["Expenses", "Revenses"],
   });
+  console.log(filter.period.month());
   function handleFilterType(type) {
     let newTypes = filter.types;
     const index = newTypes.indexOf(type);
@@ -35,6 +46,10 @@ function Transactions() {
                 fontSize: "1rem",
               },
             }}
+            value={filter.period}
+            views={["year", "month"]}
+            openTo="month"
+            onChange={(newValue) => setFilter({ ...filter, period: newValue })}
           />
           <Chip
             icon={
@@ -67,7 +82,14 @@ function Transactions() {
             onClick={(event) => handleFilterType("Revenses")}
           />
         </div>
-        <Button>Add Transactions</Button>
+        <Button
+          variant="filled"
+          disableElevation
+          size="small"
+          startIcon={<AddOutlinedIcon />}
+        >
+          Add Transactions
+        </Button>
       </div>
       <Grid container spacing={4}>
         <Grid item xs={6}>
