@@ -4,10 +4,17 @@ import {
   ToggleButton,
   ToggleButtonGroup,
 } from "@mui/material";
+import React from "react";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import "./TransactionList.scss";
 
 function TransactionList() {
+  const [sortOrder, setSortOrder] = React.useState("Newest");
+  const handleOrder = (event, newSortOrder) => {
+    if (newSortOrder !== null) {
+      setSortOrder(newSortOrder);
+    }
+  };
   return (
     <div className="transaction-list">
       <Box
@@ -22,14 +29,27 @@ function TransactionList() {
           <Typography variant="h6">Transactions</Typography>
           <ToggleButtonGroup
             variant="outlined"
+            value={sortOrder}
+            exclusive
             aria-label="outlined primary button group"
+            onChange={handleOrder}
           >
-            <ToggleButton selected>
-              <CheckOutlinedIcon fontSize="14px" sx={{ marginRight: "8px" }} />
+            <ToggleButton value="Newest">
+              {sortOrder === "Newest" ? (
+                <CheckOutlinedIcon
+                  fontSize="14px"
+                  sx={{ marginRight: "8px" }}
+                />
+              ) : null}
               Newest
             </ToggleButton>
-            <ToggleButton>
-              <CheckOutlinedIcon fontSize="14px" sx={{ marginRight: "8px" }} />
+            <ToggleButton value="Oldest">
+              {sortOrder === "Oldest" ? (
+                <CheckOutlinedIcon
+                  fontSize="14px"
+                  sx={{ marginRight: "8px" }}
+                />
+              ) : null}
               Oldest
             </ToggleButton>
           </ToggleButtonGroup>

@@ -15,10 +15,10 @@ const M3Theme = ({ children }) => {
 
   const m3Theme = useMemo(() => {
     const muiPalette = getMUIPalette(themeMode, themeScheme);
-
+    console.log(muiPalette);
     let theme = createTheme(muiPalette);
     theme = deepmerge(theme, getMUIComponents(theme));
-
+    console.log(theme);
     return theme;
   }, [themeMode, themeScheme]);
 
