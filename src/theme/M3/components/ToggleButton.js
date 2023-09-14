@@ -20,6 +20,8 @@ export const getToggleButton = (theme) => {
     MuiToggleButton: {
       styleOverrides: {
         root: {
+          maxHeight: "32px",
+          minWidth: "80px",
           borderRadius: "50px",
           textTransform: "none",
           color: palette.onSurface.main,
