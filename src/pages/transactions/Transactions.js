@@ -3,6 +3,7 @@ import { Button, Chip, Grid, Typography } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+import TransactionList from "./transaction-list/TransactionList";
 
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -91,14 +92,18 @@ function Transactions() {
           Add Transactions
         </Button>
       </div>
-      <Grid container spacing={4}>
+      {/* <Grid container spacing={4} sx={{ height: "100%" }}>
         <Grid item xs={6}>
-          hello
+          <TransactionList />
         </Grid>
         <Grid item xs={6}>
           hi
         </Grid>
-      </Grid>
+      </Grid> */}
+      <div className="section-divider">
+        <TransactionList />
+        <span>hi</span>
+      </div>
     </div>
   );
 }

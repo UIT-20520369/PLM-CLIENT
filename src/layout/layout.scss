@@ -1,12 +1,13 @@
-.App{
-    display: flex;
-    >.left{
-        width: 256px;
+.App {
+  display: flex;
+  > .left {
+    width: 256px;
+  }
+  > .right {
+    flex-grow: 1;
+    > .page {
+      padding: 24px;
+      height: calc(100vh - 64px);
     }
-    >.right{
-        flex-grow: 1;
-        >.page{
-            padding: 24px;
-        }
-    }
+  }
 }
