@@ -20,8 +20,8 @@ export const getDrawer = (theme) => {
       styleOverrides: {
         paper: {
           border: "0px",
-          background: palette.surfaceContainer.main,
-          color: palette.onSurfaceVariant.main,
+          background: palette.surface.main,
+          color: palette.onSurface.main,
         },
       },
     },

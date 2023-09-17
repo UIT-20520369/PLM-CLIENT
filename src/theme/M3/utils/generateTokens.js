@@ -76,7 +76,7 @@ export const generateDesignTokens = (themeMode, tonalPalette) => {
     onTertiaryFixed: getColorToken(themeMode, tertiary, 10, 10),
     onTertiaryFixedVariant: getColorToken(themeMode, tertiary, 30, 30),
 
-    surface: getColorToken(themeMode, neutral, 98, 6),
+    surface: getColorToken(themeMode, primary, 98, 6),
     onSurface: getColorToken(themeMode, neutral, 10, 90),
 
     surfaceDim: getColorToken(themeMode, neutral, 87, 6),
@@ -105,7 +105,7 @@ export const generateDesignTokens = (themeMode, tonalPalette) => {
 
     surfaceTintColor: getColorToken(themeMode, primary, 40, 80),
 
-    background: getColorToken(themeMode, neutral, 98, 6),
+    background: getColorToken(themeMode, neutral, 99, 6),
     onBackground: getColorToken(themeMode, neutral, 10, 90),
 
     pay: getColorToken(themeMode, pay, 40, 80),
