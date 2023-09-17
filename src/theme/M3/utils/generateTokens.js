@@ -7,8 +7,16 @@ const getColorToken = (themeMode, palette, lightLevel, darkLevel) =>
   palette[themeMode == "light" ? lightLevel : darkLevel];
 
 export const generateDesignTokens = (themeMode, tonalPalette) => {
-  const { primary, secondary, tertiary, neutral, neutralVariant, error } =
-    tonalPalette;
+  const {
+    primary,
+    secondary,
+    tertiary,
+    neutral,
+    neutralVariant,
+    error,
+    earn,
+    pay,
+  } = tonalPalette;
 
   const { customColors } = themeFromSourceColor(
     argbFromHex(tonalPalette.primary[40]),
@@ -99,6 +107,16 @@ export const generateDesignTokens = (themeMode, tonalPalette) => {
 
     background: getColorToken(themeMode, neutral, 98, 6),
     onBackground: getColorToken(themeMode, neutral, 10, 90),
+
+    pay: getColorToken(themeMode, pay, 40, 80),
+    onPay: getColorToken(themeMode, pay, 100, 20),
+    payContainer: getColorToken(themeMode, pay, 90, 30),
+    onPayContainer: getColorToken(themeMode, pay, 10, 90),
+
+    earn: getColorToken(themeMode, earn, 40, 80),
+    onEarn: getColorToken(themeMode, earn, 100, 20),
+    earnContainer: getColorToken(themeMode, earn, 90, 30),
+    onEarnContainer: getColorToken(themeMode, earn, 10, 90),
 
     info: hexFromArgb(customColors[0][themeMode].color),
     onInfo: hexFromArgb(customColors[0][themeMode].onColor),

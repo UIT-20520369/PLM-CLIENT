@@ -14,7 +14,8 @@ import {
 //         onPrimaryContainer;
 //         onSecondary: true;
 //         onSecondaryContainer: true;
-//
+//         pay: true;
+//         earn: true;
 //     }
 // }
 export const getTypography = (theme) => {
@@ -62,6 +63,18 @@ export const getTypography = (theme) => {
           props: { color: "onSecondaryContainer" },
           style: {
             color: palette.onSecondaryContainer.main,
+          },
+        },
+        {
+          props: { color: "pay" },
+          style: {
+            color: palette.pay.main,
+          },
+        },
+        {
+          props: { color: "earn" },
+          style: {
+            color: palette.earn.main,
           },
         },
       ],

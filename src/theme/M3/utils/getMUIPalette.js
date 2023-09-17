@@ -360,6 +360,40 @@ export const getMUIPalette = (themeMode, themescheme) => {
         contrastText: scheme.warningContainer,
       },
 
+      earn: {
+        main: scheme.earn,
+        contrastText: scheme.onEarn,
+      },
+      onEarn: {
+        main: scheme.onEarn,
+        contrastText: scheme.earn,
+      },
+      earnContainer: {
+        main: scheme.earnContainer,
+        contrastText: scheme.onEarnContainer,
+      },
+      onEarnContainer: {
+        main: scheme.onEarnContainer,
+        contrastText: scheme.earnContainer,
+      },
+
+      pay: {
+        main: scheme.pay,
+        contrastText: scheme.onPay,
+      },
+      onPay: {
+        main: scheme.onPay,
+        contrastText: scheme.pay,
+      },
+      payContainer: {
+        main: scheme.payContainer,
+        contrastText: scheme.onPayContainer,
+      },
+      onPayContainer: {
+        main: scheme.onPayContainer,
+        contrastText: scheme.payContainer,
+      },
+
       divider: scheme.outline,
     },
     tones: themescheme.tones,
@@ -368,33 +402,49 @@ export const getMUIPalette = (themeMode, themescheme) => {
       h1: {
         fontWeight: 600,
         fontSize: "2rem",
+        lineHeight: "2.25rem",
       },
       h2: {
         fontWeight: 600,
         fontSize: "1.75rem",
+        lineHeight: "2rem",
       },
       h3: {
         fontWeight: 500,
         fontSize: "1.5rem",
+        lineHeight: "2rem",
       },
       h4: {
         fontWeight: 500,
         fontSize: "1.25rem",
+        lineHeight: "1.75rem",
       },
       h5: {
         fontWeight: 500,
         fontSize: "1.25rem",
+        lineHeight: "1.75rem",
       },
       h6: {
         fontWeight: 500,
-        fontSize: "1.25rem",
+        fontSize: "1.125rem",
+        lineHeight: "1.75rem",
       },
       body1: {
-        fontSize: "1.2rem",
+        fontSize: "1.125rem",
+        lineHeight: "1.75rem",
+      },
+      body2: {
+        fontSize: "1rem",
+        lineHeight: "1.25rem",
       },
       caption: {
-        fontSize: "1rem",
+        fontSize: "0.875rem",
         fontStyle: "italic",
+        lineHeight: "1.25rem",
+      },
+      subtitle1: {
+        fontSize: "0.875rem",
+        lineHeight: "1.25rem",
       },
     },
   };

@@ -148,6 +148,16 @@ export const LightTokensDefault = {
   onWarning: "#ffffff",
   warningContainer: "#ffdad2",
   onWarningContainer: "#3c0700",
+
+  earn: "006D34",
+  onEarn: "FFFFFF",
+  earnContainer: "88FAA4",
+  onEarnContainer: "00210B",
+
+  pay: "B81D29",
+  onPay: "FFFFFF",
+  payContainer: "FFDAD7",
+  onPayContainer: "410005",
 };
 export const DarkTokensDefault = {
   primary: "#FFB3B3",
@@ -215,4 +225,14 @@ export const DarkTokensDefault = {
   onWarning: "#621200",
   warningContainer: "#8a1d00",
   onWarningContainer: "#ffdad2",
+
+  earn: "6CDD8A",
+  onEarn: "003918",
+  earnContainer: "005225",
+  onEarnContainer: "88FAA4",
+
+  pay: "FFB3AF",
+  onPay: "68000D",
+  payContainer: "930017",
+  onPayContainer: "FFDAD7",
 };

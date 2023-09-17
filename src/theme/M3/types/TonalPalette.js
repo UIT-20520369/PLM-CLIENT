@@ -5,6 +5,8 @@ import {
   PrimaryDefault,
   SecondaryDefault,
   TertiaryDefault,
+  EarnDefault,
+  PayDefault,
 } from "./Tone";
 
 // export type TonalPalette = {
@@ -23,4 +25,6 @@ export const TonalPaletteDefault = {
   neutral: NeutralDefault,
   neutralVariant: NeutralVariantDefault,
   error: ErrorDefault,
+  pay: PayDefault,
+  earn: EarnDefault,
 };
