@@ -1,0 +1,12 @@
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  > img {
+    width: 40px;
+    height: 40px;
+  }
+  > .content {
+    flex-grow: 1;
+  }
+}

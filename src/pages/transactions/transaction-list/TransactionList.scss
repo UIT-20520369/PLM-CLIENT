@@ -1,7 +1,13 @@
 .transaction-list {
   height: 100%;
-  .header {
-    display: flex;
-    justify-content: space-between;
+  .container {
+    > .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+    }
+    > .content {
+      padding: 12px;
+    }
   }
 }

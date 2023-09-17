@@ -21,6 +21,7 @@ export const getToggleButton = (theme) => {
       styleOverrides: {
         root: {
           maxHeight: "32px",
+          padding: "0 11px",
           minWidth: "80px",
           borderRadius: "50px",
           textTransform: "none",

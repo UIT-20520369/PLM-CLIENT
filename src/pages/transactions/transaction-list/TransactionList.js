@@ -3,7 +3,10 @@ import {
   Box,
   ToggleButton,
   ToggleButtonGroup,
+  Divider,
+  Paper,
 } from "@mui/material";
+import TransactionItem from "../../../shared/transaction-item/TransactionItem";
 import React from "react";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import "./TransactionList.scss";
@@ -18,11 +21,11 @@ function TransactionList() {
   return (
     <div className="transaction-list">
       <Box
+        className="container"
         sx={{
           bgcolor: (theme) => theme.palette.surfaceContainer.main,
           height: "100%",
           borderRadius: (theme) => theme.shape.borderRadius,
-          padding: "12px",
         }}
       >
         <div className="header">
@@ -53,6 +56,14 @@ function TransactionList() {
               Oldest
             </ToggleButton>
           </ToggleButtonGroup>
+        </div>
+        <Divider />
+        <div className="content">
+          <Paper sx={{ padding: "12px", borderRadius: "12px" }}>
+            <TransactionItem />
+            <TransactionItem />
+            <TransactionItem />
+          </Paper>
         </div>
       </Box>
     </div>
