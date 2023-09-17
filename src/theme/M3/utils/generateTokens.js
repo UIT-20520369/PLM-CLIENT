@@ -4,7 +4,7 @@ import {
   themeFromSourceColor,
 } from "@material/material-color-utilities";
 const getColorToken = (themeMode, palette, lightLevel, darkLevel) =>
-  palette[themeMode == "light" ? lightLevel : darkLevel];
+  palette[themeMode === "light" ? lightLevel : darkLevel];
 
 export const generateDesignTokens = (themeMode, tonalPalette) => {
   const {
