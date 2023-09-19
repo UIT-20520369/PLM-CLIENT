@@ -5,6 +5,8 @@ import {
   ToggleButtonGroup,
   Divider,
   Paper,
+  List,
+  ListItemButton,
 } from "@mui/material";
 import TransactionItem from "../../../shared/transaction-item/TransactionItem";
 import React from "react";
@@ -60,9 +62,29 @@ function TransactionList() {
         <Divider />
         <div className="content">
           <Paper sx={{ padding: "12px 0", borderRadius: "12px" }}>
-            <TransactionItem />
-            <TransactionItem />
-            <TransactionItem />
+            <List>
+              <ListItemButton sx={{ display: "block", borderRadius: "0" }}>
+                <TransactionItem
+                  style={{
+                    padding: "0",
+                  }}
+                />
+              </ListItemButton>
+              <ListItemButton sx={{ display: "block", borderRadius: "0" }}>
+                <TransactionItem
+                  style={{
+                    padding: "0",
+                  }}
+                />
+              </ListItemButton>
+              <ListItemButton sx={{ display: "block", borderRadius: "0" }}>
+                <TransactionItem
+                  style={{
+                    padding: "0",
+                  }}
+                />
+              </ListItemButton>
+            </List>
           </Paper>
         </div>
       </Box>
