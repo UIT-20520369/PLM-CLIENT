@@ -8,6 +8,7 @@ import M3 from "./theme/M3/M3";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "dayjs/locale/en-gb";
+import GenerateCSSColor from "./customStyle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +16,7 @@ root.render(
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en-gb">
       <React.StrictMode>
         <RouterProvider router={router} />
+        <GenerateCSSColor />
       </React.StrictMode>
     </LocalizationProvider>
   </M3>

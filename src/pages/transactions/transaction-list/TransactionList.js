@@ -59,7 +59,7 @@ function TransactionList() {
         </div>
         <Divider />
         <div className="content">
-          <Paper sx={{ padding: "12px", borderRadius: "12px" }}>
+          <Paper sx={{ padding: "12px 0", borderRadius: "12px" }}>
             <TransactionItem />
             <TransactionItem />
             <TransactionItem />
