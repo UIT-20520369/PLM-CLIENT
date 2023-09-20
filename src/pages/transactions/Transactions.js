@@ -16,11 +16,11 @@ dayjs.extend(timezone);
 
 dayjs.tz.setDefault("Asia/Ho_Chi_Minh");
 function Transactions() {
+  const [sortOrder, setSortOrder] = useState("Newest");
   const [filter, setFilter] = useState({
     period: dayjs(),
     types: ["Expenses", "Revenses"],
   });
-  console.log(filter.period.month());
   function handleFilterType(type) {
     let newTypes = filter.types;
     const index = newTypes.indexOf(type);
@@ -30,7 +30,6 @@ function Transactions() {
       newTypes.push(type);
     }
     setFilter({ ...filter, types: newTypes });
-    console.log(filter.types);
   }
   return (
     <div id="transactions">
@@ -101,7 +100,7 @@ function Transactions() {
         </Grid>
       </Grid> */}
       <div className="section-divider">
-        <TransactionList />
+        <TransactionList sortOrder={sortOrder} setSortOrder={setSortOrder} />
         <span>hi</span>
       </div>
     </div>

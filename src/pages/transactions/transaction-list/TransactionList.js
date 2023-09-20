@@ -14,8 +14,7 @@ import React from "react";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import "./TransactionList.scss";
 
-function TransactionList() {
-  const [sortOrder, setSortOrder] = React.useState("Newest");
+function TransactionList({ sortOrder, setSortOrder }) {
   const handleOrder = (event, newSortOrder) => {
     if (newSortOrder !== null) {
       setSortOrder(newSortOrder);
