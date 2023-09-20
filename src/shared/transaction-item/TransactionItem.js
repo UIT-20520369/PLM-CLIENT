@@ -16,7 +16,9 @@ function TransactionItem({ style }) {
     <div className="transaction-item" style={newStyle}>
       <img src={Icon} alt=""></img>
       <div className="content">
-        <Typography variant="body2">Eating out</Typography>
+        <Typography variant="body2" color="onSurface">
+          Eating out
+        </Typography>
         <Typography variant="subtitle1" color="onSurfaceVariant" component="p">
           with John
         </Typography>

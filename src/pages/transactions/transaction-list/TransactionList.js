@@ -7,6 +7,7 @@ import {
   Paper,
   List,
   ListItemButton,
+  ListSubheader,
 } from "@mui/material";
 import TransactionItem from "../../../shared/transaction-item/TransactionItem";
 import React from "react";
@@ -61,8 +62,29 @@ function TransactionList() {
         </div>
         <Divider />
         <div className="content">
-          <Paper sx={{ padding: "12px 0", borderRadius: "12px" }}>
+          <Paper sx={{ borderRadius: "12px" }}>
             <List>
+              <ListSubheader component="div" className="item-header">
+                <Typography variant="h2" component="p">
+                  22
+                </Typography>
+                <div className="date">
+                  <Typography variant="body2" color="onSurface">
+                    Wednesday
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    color="onSurfaceVariant"
+                    component="p"
+                  >
+                    June, 2023
+                  </Typography>
+                </div>
+                <Typography variant="h3" component="p" color="pay">
+                  -20,000
+                </Typography>
+              </ListSubheader>
+              <Divider sx={{ margin: "4px 0;" }} />
               <ListItemButton sx={{ display: "block", borderRadius: "0" }}>
                 <TransactionItem
                   style={{

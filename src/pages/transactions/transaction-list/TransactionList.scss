@@ -8,6 +8,15 @@
     }
     > .content {
       padding: 12px;
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        > .date {
+          flex-grow: 1;
+        }
+      }
     }
   }
 }
